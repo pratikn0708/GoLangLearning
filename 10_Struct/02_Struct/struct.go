@@ -12,6 +12,14 @@ type secretAgent struct {
 	ltk    bool
 }
 
+type human interface {
+	speak()
+}
+
+func bar(h human) {
+	fmt.Println("I called human")
+}
+
 func main() {
 	p1 := person{
 		firstName: "James",
